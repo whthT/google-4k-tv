@@ -1,0 +1,62 @@
+{
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "google-4k-tv",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.whtht.google4ktv.dev",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "label": "tv",
+        "fullscreen": false,
+        "resizable": true,
+        "maximized": true,
+        "title": "Google 4K TV",
+        "width": 800,
+        "height": 600,
+        "userAgent": "Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/90.0.4430.212 Large Screen Safari/534.24 GoogleTV/092754",
+        "url": "https://play.google.com/store/movies"
+      },
+      {
+        "label": "remote",
+        "fullscreen": false,
+        "resizable": false,
+        "closable": false,
+        "title": "Remote",
+        "width": 300,
+        "height": 700,
+        "maxWidth": 300,
+        "maxHeight": 700,
+        "url": "index.html"
+      }
+    ]
+  }
+}
